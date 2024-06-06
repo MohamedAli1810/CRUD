@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./image/bookmark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">    
+    <script
+    src="https://kit.fontawesome.com/981b15123d.js"
+    crossorigin="anonymous"
+    ></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.min.css
+    " rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+   <main>
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+      <h1 class="mt-5">
+        Bookmarker
+      </h1>
+      <div class="bm w-100 d-flex flex-column justify-content-center align-items-center">
+        <h2 class="my-4">
+          <i class="fa-solid fa-bookmark"></i>
+           Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="w-100  d-flex flex-column justify-content-center ">
+        <label for="bookmarkname" class="fw-bold">
+          <i class="fa-solid fa-book-bookmark pe-2"></i>
+          Site Name
+        </label>
+        <input oninput="validition(this);" type="text" placeholder="Bookmark Name" class="form-control input-b rounded-1"  id="bookmarkname">
+        <div class="alert alert-danger d-none my-2 p-1">
+          <p>Bookmark Name must start with at least upper letter </p>
+        </div>
+        <label for="bookmarkurl" class="mt-4 fw-bold">
+          <i class="fa-solid fa-link pe-2"></i>
+          Site URL
+        </label>
+        <input oninput="validition(this);" type="text" placeholder="Website URL" class="form-control input-b rounded-1" id="bookmarkurl">
+        <div class="alert alert-danger d-none my-2 p-1">
+          <p>Bookmark Name must start with at least ( https or www with ( . ) )</p>
+        </div>
+        </div>
+        <button class="btn b-submit px-5 mt-3 mb-4" onclick="submit()">Submit</button>
+      </div>
+      <table class="table mt-4 text-center bg-light">
+        <thead>
+          <th class="">Index</th>
+          <th class="">Website Name</th>
+          <th class="">Visit</th>
+          <th class="">Delete</th>
+        </thead>
+        <tbody id="tableCapition"></tbody>
+      </table>
+    </div>
+   </main>
+   <script src="
+      https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.all.min.js
+   "></script>
+    <script src="./JS/index.js"></script>
+</body>
+</html>
